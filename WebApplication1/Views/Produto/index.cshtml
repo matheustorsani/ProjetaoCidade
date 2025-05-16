@@ -1,0 +1,55 @@
+@model IEnumerable<WebApplication1.Models.Produto>
+<link href="~/css/homeprod.css" rel="stylesheet" />
+<p class="navi">
+    <a asp-controller="Produto" asp-action="CadastrarProduto" class="btn btn-primary bcad">Cadastrar Produto</a>
+</p>
+<table class="table table-bordered table-hover user-select-none">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantidade)
+        </th>
+        <th>Ação</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantidade)
+            </td>
+            <td>
+                <a asp-controller="produto" asp-action="EditarProduto" asp-route-id="@item.id" class="btn btn-sm btn-warning">Editar</a>
+                <span>|</span>
+                <a asp-controller="produto" asp-action="ExcluirProduto" asp-route-id="@item.id"
+                   onclick="return confirm('Deseja excluir este item?');" class="btn btn-sm btn-danger">Excluir</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
