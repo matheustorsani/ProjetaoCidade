@@ -14,7 +14,7 @@ namespace WebApplication1.Repositorio
             using (var conexao = new MySqlConnection(_connectSql))
             {
                 conexao.Open();
-                MySqlCommand cmd = new("Select * from usuarios where Email = @email", conexao);
+                MySqlCommand cmd = new("Select * from usuarios where email = @email", conexao);
                 cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
 
                 using (MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
