@@ -11,10 +11,10 @@ namespace WebApplication1.Repositorio
 
         public Usuario ObterUsuario(string email)
         {
-            using (var conexao = new MySqlConnection(_connectSql))
+            using (var connection = new MySqlConnection(_connectSql))
             {
-                conexao.Open();
-                MySqlCommand cmd = new("Select * from tbUsuario where email = @email", conexao);
+                connection.Open();
+                MySqlCommand cmd = new("Select * from tbUsuario where email = @email", connection);
                 cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
 
                 using (MySqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))

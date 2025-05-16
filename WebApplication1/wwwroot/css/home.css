@@ -1,0 +1,13 @@
+﻿
+.container1 {
+    border: 1px solid #fff;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: black;
+    width: 30REM;
+}
+
+.btn {
+    width: 10rem;
+}

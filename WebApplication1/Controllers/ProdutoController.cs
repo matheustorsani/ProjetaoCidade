@@ -70,7 +70,7 @@ namespace WebApplication1.Controllers
 
         public IActionResult ExcluirProduto(int id)
         {
-            _produtoRepositorio.Excluir(id);
+            _produtoRepositorio.ExcluirProduto(id);
             return RedirectToAction(nameof(Index));
         }
     }

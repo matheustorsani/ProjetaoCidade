@@ -1,0 +1,25 @@
+﻿.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+.forms {
+    border: 1px solid #fff;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: black;
+    width: 30REM;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+    
