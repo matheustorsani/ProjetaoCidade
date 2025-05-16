@@ -13,7 +13,7 @@ namespace WebApplication1.Repositorio
             using (var connection = new MySqlConnection(_connectSql))
             {
                 connection.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into tbProdutos(nome,descricao,preco,quantidade) values (@nome, @descricao, @preco, @quantidade");
+                MySqlCommand cmd = new MySqlCommand("insert into tbProdutos(nome,descricao,preco,quantidade) values (@nome, @descricao, @preco, @quantidade)");
                 cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.nome;
                 cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.descricao;
                 cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.preco;
