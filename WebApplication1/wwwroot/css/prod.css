@@ -1,0 +1,22 @@
+﻿.nav {
+    margin: 2rem;
+}
+
+.table {
+    color: #fff;
+}
+
+.mainc, h1 {
+    color: #fff;
+}
+
+form {
+    width: 20rem !important;
+}
+.bottom {
+    margin-top: 2rem;
+}
+
+.bottom > input {
+    margin-right: 1rem;
+}

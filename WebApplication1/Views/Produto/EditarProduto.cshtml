@@ -1,10 +1,8 @@
 @model WebApplication1.Models.Produto;
-<link href="~/css/cadprod.css" rel="stylesheet" />
+<link href="~/css/prod.css" rel="stylesheet" />
 <h1>Editar Produto</h1>
 
-<hr />
-<div class="row corpo">
-    <div class="col-md-5">
+<div class="row mainc">
         <form asp-action="EditarProduto">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -32,10 +30,9 @@
                 <span asp-validation-for="quantidade" class="text-danger"></span>
             </div>
 
-            <div class="form-group butao">
+            <div class="form-group bottom">
                 <input type="submit" value="Cadastrar" class="btn btn-success"/>
                 <a asp-action="Index" class="btn btn-primary">Voltar</a>
             </div>
         </form>
-    </div>
 </div>

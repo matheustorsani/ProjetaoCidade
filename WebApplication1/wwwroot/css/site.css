@@ -40,3 +40,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
+body {
+    background: #000;
+}
